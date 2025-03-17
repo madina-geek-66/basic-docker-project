@@ -48,3 +48,22 @@ docker pull votre-nom-utilisateur/simple-http-server:latest
 docker run -p 8000:8000 votre-nom-utilisateur/simple-http-server:latest
 
 Remplacez votre-nom-utilisateur par votre nom d'utilisateur DockerHub réel.
+
+## Méthode automatisée (CI/CD)
+Ce projet utilise GitHub Actions pour automatiser la construction et le déploiement de l'image Docker sur DockerHub à chaque push sur la branche principale.
+Configuration requise
+
+- Créez un dépôt GitHub et poussez votre code.
+- Configurez deux secrets dans les paramètres du dépôt GitHub :
+
+    DOCKERHUB_USERNAME : votre nom d'utilisateur DockerHub
+    DOCKERHUB_TOKEN : votre token d'accès DockerHub
+
+
+
+Le workflow CI/CD est défini dans le fichier .github/workflows/docker-publish.yml.
+# Télécharger l'image depuis DockerHub
+Pour utiliser l'image déjà publiée :
+docker pull votre-nom-utilisateur/simple-http-server:latest
+docker run -p 8000:8000 votre-nom-utilisateur/simple-http-server:latest
+Remplacez votre-nom-utilisateur par votre nom d'utilisateur DockerHub réel.
