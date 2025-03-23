@@ -8,7 +8,7 @@ basic-docker-project/
 ├── docker-compose.yml
 └── README.md
 
-Prérequis
+# Prérequis
 
 Docker
 Docker Compose (optionnel)
@@ -62,8 +62,3 @@ Configuration requise
 
 
 Le workflow CI/CD est défini dans le fichier .github/workflows/docker-publish.yml.
-# Télécharger l'image depuis DockerHub
-Pour utiliser l'image déjà publiée :
-docker pull votre-nom-utilisateur/simple-http-server:latest
-docker run -p 8000:8000 votre-nom-utilisateur/simple-http-server:latest
-Remplacez votre-nom-utilisateur par votre nom d'utilisateur DockerHub réel.
